@@ -32,23 +32,25 @@ class _QuotationNavigatorState extends State<QuotationNavigator>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.pageBg,
-      body: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          PageView(
-            controller: widget.pageController,
-            children: widget.pages,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: TabPageSelector(
-              controller: tabController,
-              indicatorSize: 24.0,
-              color: AppColors.circleBg,
-              selectedColor: AppColors.primary,
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.bottomCenter,
+          children: [
+            PageView(
+              controller: widget.pageController,
+              children: widget.pages,
             ),
-          ),
-        ],
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: TabPageSelector(
+                controller: tabController,
+                indicatorSize: 24.0,
+                color: AppColors.circleBg,
+                selectedColor: AppColors.primary,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
