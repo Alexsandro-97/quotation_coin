@@ -31,7 +31,10 @@ class _QuotationAppState extends State<QuotationApp> {
         pages: [
           PageContainer(
             actions: [
-              ElevatedButton(onPressed: () {}, child: const Text('Próximo'))
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Próximo'),
+              )
             ],
           ),
           const PageContainer(),
