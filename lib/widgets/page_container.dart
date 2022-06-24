@@ -33,7 +33,14 @@ class PageContainer extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
-          Row(children: actions),
+          const Expanded(
+            child: SizedBox(),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: actions,
+          ),
+          const SizedBox(height: 61),
         ],
       ),
     );
